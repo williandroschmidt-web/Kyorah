@@ -1,0 +1,110 @@
+:root {
+
+  /* ========================= */
+  /* CORES                     */
+  /* ========================= */
+
+  --bg: #090B16;
+
+  --surface: #101726;
+  --surface-2: #141D30;
+  --surface-3: #1A243A;
+
+  --primary: #7B61FF;
+  --primary-light: #9D8BFF;
+
+  --secondary: #00D6FF;
+  --secondary-light: #72E8FF;
+
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+
+  --text: #FFFFFF;
+  --text-secondary: #A2AEC9;
+  --text-muted: #7E8AA8;
+
+  --border: rgba(255,255,255,.08);
+  --border-light: rgba(255,255,255,.04);
+
+  /* ========================= */
+  /* GRADIENTES                */
+  /* ========================= */
+
+  --gradient-primary:
+    linear-gradient(
+      135deg,
+      #7B61FF,
+      #00D6FF
+    );
+
+  --gradient-surface:
+    linear-gradient(
+      180deg,
+      #151C31,
+      #0F1527
+    );
+
+  --gradient-text:
+    linear-gradient(
+      90deg,
+      #FFFFFF,
+      #C8D5FF
+    );
+
+  /* ========================= */
+  /* SOMBRAS                   */
+  /* ========================= */
+
+  --shadow-sm:
+    0 8px 18px rgba(0,0,0,.20);
+
+  --shadow-md:
+    0 18px 45px rgba(0,0,0,.28);
+
+  --shadow-lg:
+    0 28px 70px rgba(0,0,0,.42);
+
+  --shadow-glow:
+    0 0 40px rgba(123,97,255,.25);
+
+  /* ========================= */
+  /* BORDER RADIUS             */
+  /* ========================= */
+
+  --radius-sm: 14px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-2xl: 40px;
+
+  /* ========================= */
+  /* ESPAÇAMENTOS              */
+  /* ========================= */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 56px;
+  --space-10: 72px;
+
+  /* ========================= */
+  /* ANIMAÇÕES                 */
+  /* ========================= */
+
+  --fast: .20s;
+  --normal: .30s;
+  --slow: .50s;
+
+  /* ========================= */
+  /* SIDEBAR                   */
+  /* ========================= */
+
+  --sidebar-width: 330px;
+
+}

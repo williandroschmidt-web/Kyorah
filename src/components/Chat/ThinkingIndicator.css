@@ -1,0 +1,100 @@
+.thinking-box{
+    display:flex;
+    align-items:center;
+    padding:20px 24px;
+}
+
+.kyorah-loader{
+
+    position:relative;
+
+    width:34px;
+    height:34px;
+
+}
+
+.loader-core{
+
+    position:absolute;
+
+    inset:8px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        #7B61FF,
+        #25C7FF
+    );
+
+    box-shadow:
+        0 0 20px rgba(123,97,255,.45);
+
+}
+
+.loader-ring{
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:50%;
+
+    border:2px solid transparent;
+
+    border-top-color:#7B61FF;
+    border-right-color:#25C7FF;
+
+    animation:spin 1s linear infinite;
+
+}
+
+.loader-ring::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-3px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:#25C7FF;
+
+    box-shadow:
+        0 0 12px #25C7FF;
+
+}
+
+@keyframes spin{
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+.thinking-message{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
+
+    width:fit-content;
+    max-width:760px;
+}
+
+.thinking-box{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    min-width:120px;
+    min-height:72px;
+}

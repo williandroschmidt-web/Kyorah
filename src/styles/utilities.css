@@ -1,0 +1,162 @@
+/* ========================= */
+/* FLEX                      */
+/* ========================= */
+
+.flex{
+    display:flex;
+}
+
+.flex-center{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.flex-between{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.flex-column{
+    display:flex;
+    flex-direction:column;
+}
+
+/* ========================= */
+/* GRID                      */
+/* ========================= */
+
+.grid{
+    display:grid;
+}
+
+/* ========================= */
+/* GLASS                     */
+/* ========================= */
+
+.glass{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+}
+
+/* ========================= */
+/* CARD                      */
+/* ========================= */
+
+.card{
+
+    background:var(--surface);
+
+    border-radius:var(--radius-xl);
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+/* ========================= */
+/* GRADIENTE                 */
+/* ========================= */
+
+.gradient-text{
+
+    background:var(--gradient-primary);
+
+    background-clip:text;
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+/* ========================= */
+/* BOTÃO                     */
+/* ========================= */
+
+.button-primary{
+
+    background:var(--gradient-primary);
+
+    color:white;
+
+    border:none;
+
+    border-radius:var(--radius-md);
+
+    transition:var(--normal);
+
+}
+
+.button-primary:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:var(--shadow-glow);
+
+}
+
+/* ========================= */
+/* INPUT                     */
+/* ========================= */
+
+.input{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius-lg);
+
+    color:var(--text);
+
+}
+
+/* ========================= */
+/* TEXTO                     */
+/* ========================= */
+
+.text-muted{
+
+    color:var(--text-muted);
+
+}
+
+.text-secondary{
+
+    color:var(--text-secondary);
+
+}
+
+/* ========================= */
+/* ANIMAÇÕES                 */
+/* ========================= */
+
+.fade-in{
+
+    animation:fadeIn .45s ease;
+
+}
+
+.float{
+
+    animation:floating 6s ease-in-out infinite;
+
+}
+
+.glow{
+
+    animation:glow 4s ease-in-out infinite;
+
+}

@@ -1,0 +1,102 @@
+@import "./styles/variables.css";
+@import "./styles/globals.css";
+@import "./styles/animations.css";
+@import "./styles/utilities.css";
+
+/* ========================= */
+/* APP                       */
+/* ========================= */
+
+.app{
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    background:var(--bg);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* Luz superior */
+
+.app::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-320px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:900px;
+    height:900px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        circle,
+        rgba(123,97,255,.18),
+        transparent 70%
+    );
+
+    pointer-events:none;
+
+    filter:blur(50px);
+
+}
+
+/* Luz inferior */
+
+.app::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-450px;
+    right:-300px;
+
+    width:900px;
+    height:900px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        circle,
+        rgba(0,214,255,.08),
+        transparent 70%
+    );
+
+    pointer-events:none;
+
+    filter:blur(60px);
+
+}
+
+/* ========================= */
+/* MAIN                      */
+/* ========================= */
+
+.main-content{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    position:relative;
+
+    overflow:hidden;
+
+    z-index:2;
+
+}

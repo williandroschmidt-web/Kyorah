@@ -1,0 +1,152 @@
+.chat {
+    flex: 1;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 30px 0;
+}
+
+.messages{
+    width:min(900px,100%);
+    margin:0 auto;
+
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    max-width: 760px;
+    animation: messageIn .25s ease;
+}
+
+.message.user {
+    align-items: flex-end;
+}
+
+.message.assistant {
+    align-items: flex-start;
+}
+
+.assistant-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.assistant-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #171E35;
+}
+
+.assistant-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.assistant-header span {
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.message-content {
+    max-width: 760px;
+    padding: 18px 22px;
+    border-radius: 22px;
+    line-height: 1.8;
+    font-size: 16px;
+    white-space: pre-wrap;
+}
+
+.user .message-content {
+    background: linear-gradient(
+        135deg,
+        #7B61FF,
+        #5B48D6
+    );
+
+    color: white;
+
+    border-bottom-right-radius: 8px;
+}
+
+.assistant .message-content {
+    background: #151B30;
+    color: #EEF2FF;
+    border: 1px solid rgba(255,255,255,.05);
+    border-bottom-left-radius: 8px;
+}
+
+.thinking {
+    display: flex;
+    gap: 8px;
+    padding: 14px 0;
+}
+
+.thinking span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #7B61FF;
+    animation: pulse 1.2s infinite;
+}
+
+.thinking span:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.thinking span:nth-child(3) {
+    animation-delay: .4s;
+}
+
+@keyframes pulse {
+
+    0% {
+        transform: scale(.8);
+        opacity: .3;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(.8);
+        opacity: .3;
+    }
+
+}
+
+@keyframes messageIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.user {
+    align-self: flex-end;
+}
+
+.assistant {
+    align-self: flex-start;
+    }

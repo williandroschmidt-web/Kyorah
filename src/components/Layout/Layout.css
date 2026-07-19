@@ -1,0 +1,111 @@
+.layout{
+    display:flex;
+    width:100%;
+    height:100vh;
+    padding:18px;
+    gap:18px;
+
+    background:#090B16;
+    overflow:hidden;
+}
+
+.main{
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
+
+    position:relative;
+
+    border-radius:32px;
+
+    overflow:hidden;
+}
+
+/* brilho superior */
+
+.main::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-220px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:700px;
+    height:700px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        circle,
+        rgba(123,97,255,.14),
+        transparent 70%
+    );
+
+    pointer-events:none;
+
+    z-index:0;
+
+}
+
+/* conteúdo */
+
+.chat-area{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* overlay */
+
+.sidebar-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(4px);
+
+    z-index:1000;
+
+}
+
+@media(max-width:900px){
+
+    .layout{
+
+        padding:0;
+
+        gap:0;
+
+    }
+
+    .main{
+
+        border-radius:0;
+
+    }
+
+}
+
+@media(min-width:901px){
+
+    .sidebar-overlay{
+
+        display:none;
+
+    }
+
+}

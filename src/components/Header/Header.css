@@ -1,0 +1,41 @@
+.header{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:70px 40px 30px;
+
+}
+
+.header-content{
+
+    width:min(900px,100%);
+
+}
+
+.greeting{
+
+    color:#8C95AE;
+
+    font-size:1.1rem;
+
+    font-weight:500;
+
+}
+
+.header h1{
+
+    margin-top:8px;
+
+    font-size:3rem;
+
+    font-weight:700;
+
+    color:white;
+
+    line-height:1.15;
+
+}
