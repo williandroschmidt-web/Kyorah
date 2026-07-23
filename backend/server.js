@@ -1,6 +1,7 @@
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
+import pool from "./config/database.js";
 
 import chatRoutes from "./routes/chat.routes.js";
 
@@ -23,6 +24,14 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/chat", chatRoutes);
+
+try {
+  await pool.query("SELECT NOW()");
+  console.log("✅ PostgreSQL conectado com sucesso!");
+} catch (error) {
+  console.error("❌ Erro ao conectar ao PostgreSQL:");
+  console.error(error);
+}
 
 const PORT = process.env.PORT || 3001;
 
