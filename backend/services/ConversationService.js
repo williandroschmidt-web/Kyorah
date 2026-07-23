@@ -1,5 +1,3 @@
-import supabase from "../lib/supabase.js";
-
 export async function createConversation(userId = null) {
   const { data, error } = await supabase
     .from("conversations")
